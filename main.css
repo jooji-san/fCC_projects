@@ -1,30 +1,60 @@
-.pMain {
-  font-family: "Raleway";
-  text-align: center;
-  color: #2a2c2e;
-  max-width: 92%;
-  font-size: 3.5vmin;
-}
-
-footer i {
-  color: rgb(214, 8, 77);
-}
-
 body {
   background-color: #808080;
 }
 
-main {
+#main {
   background-color: #e9ecef;
   margin-top: 20px;
   font-family: "Dosis";
   border-radius: 7px;
   width: 90%;
+  max-width: 900px;
   margin: auto;
 
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+#title {
+  font-size: 8vmin;
+  text-align: center;
+  margin-top: 7vh;
+  color: #007bff;
+  font-weight: normal;
+}
+
+small {
+  font-size: 80%;
+  color: #6c757d;
+}
+
+#img-div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#image {
+  max-width: 95%;
+  border-radius: 10px;
+}
+
+.sr-only {
+  position: absolute;
+  left: -10000px;
+  width: 1px;
+  height: 1px;
+  top: auto;
+  overflow: hidden;
+}
+
+#tribute-info {
+  font-family: "Raleway";
+  text-align: center;
+  color: #2a2c2e;
+  max-width: 92%;
+  font-size: 3.5vmin;
 }
 
 blockquote {
@@ -37,32 +67,6 @@ blockquote {
   align-items: flex-end;
 }
 
-img {
-  max-width: 95%;
-  border-radius: 10px;
-}
-
-h1 {
-  font-size: 8vmin;
-  text-align: center;
-  margin-top: 7vh;
-  color: #007bff;
-  font-weight: normal;
-}
-
-.small {
-  font-size: 80%;
-  color: #6c757d;
-}
-
-a {
-  text-decoration: none;
-  color: #007bff;
-  font-size: 5vmin;
-  display: flex;
-  margin: 1vmin;
-}
-
 .links {
   display: flex;
   flex-direction: column;
@@ -70,10 +74,18 @@ a {
   justify-content: center;
 }
 
-footer pre {
-  font-size: 4vmin;
+a {
+  text-decoration: none;
+  color: #007bff;
+  font-size: 5vmin;
+  margin: 1vmin;
 }
 
-pre {
+footer pre {
+  font-size: 4vmin;
   font-family: inherit;
+}
+
+#heart-icon {
+  color: rgb(214, 8, 77);
 }

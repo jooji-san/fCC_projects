@@ -9,17 +9,20 @@
 
   <link href="https://fonts.googleapis.com/css?family=Dosis:500|Raleway:600" rel="stylesheet">
   <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
-  <link href="main.css" rel="stylesheet" type='text/css'>
+  <link href="main-dist.css" rel="stylesheet" type='text/css'>
 </head>
 
 <body>
-  <main>
-    <h1>Daft Punk
+  <div id='main'>
+    <h1 id='title'> Daft Punk
       <br>
-      <pre class='small'>The French Electronic Duo</pre>
+      <small> The French Electronic Duo </small>
     </h1>
-    <img src="https://bit.ly/2teDfx9" alt="Daft Punk, yo">
-    <p class='pMain'>
+    <figure id="img-div">
+      <img id='image' src="https://bit.ly/2teDfx9" alt="Daft Punk, yo">
+      <figcaption id="img-caption" class='sr-only'> Daft Punk's Portrait </figcaption>
+    </figure>
+    <p id='tribute-info'>
       <br> Formed in 1993 by Guy-Manuel de Homem-Christo and Thomas Bangalter. The duo
       achieved significant popularity in the late 1990s as part of the French house
       movement and had continuous success in the years following, combining elements
@@ -36,26 +39,25 @@
         <br> Around the world, around the world...
         <br> Around the world, around the world...
       </p>
-      <pre class='small'> - Daft Punk</pre>
+      <small> - Daft Punk <br> </small>
     </blockquote>
-    <br>
-    <br>
-    <br>
+    <p> </p>
     <div class="links">
-      <a href="https://en.wikipedia.org/wiki/Daft_Punk">
+      <a id='tribute-link' target='_blank' href="https://en.wikipedia.org/wiki/Daft_Punk">
         Read More On Wikipedia:
       </a>
-      <a href="https://bit.ly/1i557u6">
+      <a id='tribute-link' target='_blank' href="https://bit.ly/1i557u6">
         Listen To Them On YouTube:
       </a>
     </div>
     <br>
     <footer>
       <hr>
-      <pre> Made with <i class="fa fa-heart"></i> by Giorgi Shengelaia. </pre>
+      <pre> Made with <i id='heart-icon' class="fa fa-heart"></i> by Giorgi Shengelaia. </pre>
       <br>
       <br>
     </footer>
   </main>
 </body>
+
 </html>
