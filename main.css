@@ -7,7 +7,7 @@ body {
   margin-top: 20px;
   font-family: "Dosis";
   border-radius: 7px;
-  width: 90%;
+  width: 90vw;
   max-width: 900px;
   margin: auto;
 
@@ -30,13 +30,15 @@ small {
 }
 
 #img-div {
+  width: 100%;
+
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
 #image {
-  max-width: 95%;
+  max-width: 90%;
   border-radius: 10px;
 }
 
@@ -54,7 +56,7 @@ small {
   text-align: center;
   color: #2a2c2e;
   max-width: 92%;
-  font-size: 3.5vmin;
+  font-size: 4.5vmin;
 }
 
 blockquote {
