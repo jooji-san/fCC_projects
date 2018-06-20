@@ -1,0 +1,77 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://fonts.googleapis.com/css?family=Pacifico|Roboto" rel="stylesheet">
+  <link rel="stylesheet" type='text/css' href="main--processed.css">
+  <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+  <title>Survey</title>
+</head>
+
+<body>
+  <h1 id="title"> Survey Page </h1>
+  <p id="description" class='small'> This is a simple survey</p>
+  <main>
+    <form action="" id="survey-form">
+      <div id="name-div" class="form-txt">
+        <label for="name" id='name-label'> Name: </label>
+        <input type="text" id="name" placeholder="Enter your name" required>
+      </div>
+      <div id="email-div" class="form-txt">
+        <label for="email" id='email-label'> Email: </label>
+        <input type="email" id="email" placeholder="Enter your email" required>
+      </div>
+      <div id="number-div" class="form-txt">
+        <label for="number" id='number-label'> Number: </label>
+        <input type="number" id="number" min='1' max='100' placeholder="Enter your number">
+      </div>
+
+      <select id='dropdown'>
+        <option value="" disabled selected hidden>Please choose your gender</option>
+        <option value="dr1">Male</option>
+        <option value="dr2">Female</option>
+        <option value="dr3">Bot</option>
+      </select>
+
+      <div id='rad-ch-container'>
+        <div id='rad-container'>
+          <div id="rad1-div" class='rad-divs'>
+            <label for="rad1"> 1 </label>
+            <input type='radio' id='rad1' value='1' name='first'>
+          </div>
+          <div id="rad2-div" class='rad-divs'>
+            <label for="rad2"> 2 </label>
+            <input type='radio' id='rad2' value='1' name='first'>
+          </div>
+          <div id="rad3-div" class='rad-divs'>
+            <label for="rad3"> 3 </label>
+            <input type='radio' id='rad3' value='1' name='first'>
+          </div>
+        </div>
+
+        <div id='ch-container'>
+          <div id="ch1-div" class="ch-divs">
+            <label for="ch1">000</label>
+            <input type="checkbox" id='ch1' value="1">
+          </div>
+          <div id="ch2-div" class="ch-divs">
+            <label for="ch2">001</label>
+            <input type="checkbox" id='ch2' value="2">
+          </div>
+          <div id="ch3-div" class="ch-divs">
+            <label for="ch3">002</label>
+            <input type="checkbox" id='ch3' value="3">
+          </div>
+        </div>
+      </div>
+
+      <textarea rows="2"> </textarea>
+
+      <input type="submit" id='submit'>
+    </form>
+  </main>
+</body>
+
+</html>
