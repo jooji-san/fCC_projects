@@ -1,17 +1,298 @@
-nav {
-  position: fixed;
-  top: 0px;
-  left: 0px;
+:root {
+  --g1: #203541;
+  --g2: #374955;
+  --g3: #f62a66;
+  --g4: #ffd933;
+  --g5: #fffad9;
+  --g6: #cdfb00;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  /* border: 1px solid black; */
+  font-family: inherit;
+}
+
+html {
+  font-family: 'Questrial', sans-serif;
+}
+
+body {
+  overflow-x: hidden;
+  background-color: var(--g5);
+
+  display: flex;
+  justify-content: center;
+}
+
+#container {
   width: 100%;
-  background-color: grey;
-  height: 5vh;
+  max-width: 1200px;
+}
+
+header {
+  background-color: var(--g1);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  padding: 1.5vh 1.5vw;
+  z-index: 1;
+
+  display: flex;
+  justify-content: center;
+}
+
+#header-container {
+  width: 100%;
+  max-width: 1200px;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+img {
+  border-radius: 5%;
+}
+
+#header-img {
+  color: white;
+  margin-right: auto;
+  width: 65px;
+  transition: 400ms linear all;
+}
+
+#header-img:hover {
+  transform: rotate(90deg);
 }
 
 a {
-  color: white;
   text-decoration: none;
 }
 
-@media {
+header a {
+  padding: 1.5vmin;
+  font-size: 1.5rem;
+  color: white;
+}
 
+header a:hover {
+  color: lightseagreen;
+  transition: 300ms linear;
+}
+
+main {
+  margin: calc(76px + 1.5vh) 1.5vw;
+  margin-bottom: 0;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.features,
+.review-cards {
+  box-shadow: 0.3rem 0.3rem 0.3rem var(--g6);
+}
+
+#features-container {
+  width: 100%;
+  margin: 1.75rem 0;
+
+  display: flex;
+  justify-content: space-around;
+}
+
+.features {
+  padding: 1rem;
+  border-radius: 1rem;
+  text-align: center;
+  width: 150px;
+  background-color: var(--g3);
+  border: 0.15rem solid var(--g1);
+}
+
+.features i {
+  color: lightcyan;
+}
+
+.features-icons {
+  /* color: rgb(216, 213, 213); */
+  font-size: 100px;
+  margin-bottom: 0.5rem;
+}
+
+#video-container {
+  width: 100%;
+  margin: 2rem 0;
+  position: relative;
+  overflow: hidden;
+  padding-top: 56.25%;
+}
+
+#video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  border-radius: 1rem;
+}
+
+#reviews-title {
+  margin: 1rem 0;
+}
+
+#reviews-container {
+  width: 100%;
+  max-width: 900px;
+
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+
+.review-cards {
+  border: 2px solid black;
+  border-radius: 0.4rem;
+  width: calc(100% / 3 - 3vw);
+  font-size: 1.3rem;
+  background-color: azure;
+}
+
+.author {
+  font-size: 80%;
+  background-color: var(--g3);
+  border-radius: 0.3rem;
+  color: var(--g5);
+}
+
+.review-cards p,
+.author {
+  padding: 1rem;
+}
+
+#form-container {
+  width: 100%;
+  margin: 5rem 0 4rem 0;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#form-container form {
+  max-width: 400px;
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+}
+
+form input {
+  margin-top: 0.5rem;
+}
+
+#email,
+#submit {
+  padding: 0.5rem;
+  text-align: center;
+  border-radius: 0.4rem;
+  font-size: 1.3rem;
+  border: 0.1rem solid black;
+}
+
+#submit {
+  background-color: var(--g4);
+}
+
+footer {
+  position: absolute;
+  left: 0;
+  width: 100vw;
+  text-align: center;
+}
+
+#my-links {
+  padding: 0.5rem;
+  font-size: 2rem;
+}
+
+#my-links a {
+  color: black;
+}
+
+#credits1 {
+  padding: 0.75rem;
+  font-size: 1.25rem;
+  color: var(--g5);
+  background:
+    linear-gradient(to right, var(--g3), var(--g1));
+}
+
+#credits2 {
+  background:
+    linear-gradient(to right, var(--g3), var(--g1));
+  color: var(--g5);
+  padding-bottom: 0.75rem;
+}
+
+#credits2 a {
+  color: black;
+}
+
+@media (max-width: 600px) {
+  header {
+    position: static;
+  }
+
+  #header-container {
+    flex-direction: column;
+  }
+
+  #header-img {
+    margin: 2.5vh 0;
+  }
+
+  nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  main {
+    margin: 1.5vh 1.5vw;
+    padding: 0 1rem;
+  }
+
+  #features-container {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .features {
+    margin: 0.75rem 0;
+    width: 100%;
+  }
+
+  #reviews-container {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .review-cards {
+    margin-bottom: 1.5rem;
+    width: 100%;
+  }
+
+  #form-container {
+    margin-top: 3rem;
+  }
 }

@@ -3,46 +3,99 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=	">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="main--processed.css">
+  <link rel="stylesheet" href="main.css">
   <link rel="" href='https://necolas.github.io/normalize.css/8.0.0/normalize.css'>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css"
+    integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt"
+    crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Questrial" rel="stylesheet">
+
   <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
 
   <title>BFR - Product Landing Page</title>
 </head>
 
 <body>
-  <header id='header'>
-    <img src="" id='header-img' alt="company logo">
-    <nav id='nav-bar'>
-      <a href="#features" class="nav-link">Features</a>
-      <a href="#video" class="nav-link">Video</a>
-      <a href="#reviews" class="nav-link">Reviews</a>
-      <a href="#pricing" class="nav-link">Pricing</a>
+  <div id='container'>
+    <header id='header'>
+      <div id='header-container'>
+        <img src="https://sendeyo.com/up/d/531bf4e42f" id='header-img' alt="company logo">
+        <nav id='nav-bar'>
+          <a href="#features-container" class="nav-link">Features</a>
+          <a href="#video-container" class="nav-link">Video</a>
+          <a href="#reviews-container" class="nav-link">Reviews</a>
+          <a href="#pricing" class="nav-link">Pricing</a>
+        </nav>
+      </div>
+    </header>
 
-    </nav>
-  </header>
+    <main>
+      <div id='features-container'>
+        <div class='features'>
+          <i class="far fa-gem features-icons"></i>
+          <h2> Premium Materials </h2>
+        </div>
+        <div class='features'>
+          <i class="fas fa-fighter-jet features-icons"></i>
+          <h2> Pretty Fast </h2>
+        </div>
+        <div class='features'>
+          <i class="fas fa-plus features-icons"></i>
+          <h2> Quite Big </h2>
+        </div>
+      </div>
+      <div id="video-container">
+        <iframe id='video' src="https://www.youtube.com/embed/zqE-ultsWt0" frameborder="0"
+          allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      </div>
+      <h1 id='reviews-title'> Reviews: </h1>
+      <div id="reviews-container">
+        <div class="review-cards">
+          <p> "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur,
+            adipisci velit..."
+          </p>
+          <div class="author"> - Elon Musk</div>
+        </div>
+        <div class="review-cards">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua. Laoreet non curabitur
+            gravida arcu ac. Ut pharetra sit amet aliquam.
+          </p>
+          <div class="author"> - Wired</div>
+        </div>
+        <div class="review-cards">
+          <p>nibh cras pulvinar mattis nunc sed blandit</p>
+          <div class="author"> - Quincy Larson </div>
+        </div>
+      </div>
+      <div id="pricing">
 
-  <div id='features'>
-
+      </div>
+      <div id='form-container'>
+        <p> Subscribe, please. We won't sell your data (: </p>
+        <form id='form' action="https://www.freecodecamp.com/email-submit">
+          <input type="email" id='email' name='email' placeholder="Enter your Email here">
+          <input type="submit" id='submit'>
+        </form>
+      </div>
+    </main>
+    <footer>
+      <div id='my-links'>
+        <a href="https://github.com/supuun">
+          <i class="fab fa-github"></i>
+        </a>
+        <a href="https://codepen.io/supuun/">
+          <i class="fab fa-codepen"></i>
+        </a>
+      </div>
+      <p id='credits1'> Made with
+        <i class="far fa-heart"></i> by Giorgi Shengelaia
+      </p>
+      <p id='credits2'>Logo made by <a href="https://www.flaticon.com/authors/skyclick" title="Skyclick">Skyclick</a></p>
+    </footer>
   </div>
-  <iframe id='video' width="640" height="360" src="https://www.youtube.com/embed/zqE-ultsWt0"
-    frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-  <form id='form' action="https://www.freecodecamp.com/email-submit">
-    <input type="email" id='email' name='email' placeholder="Enter your Email here">
-    <input type="submit" id='submit'>
-  </form>
-  <div id="reviews">
-
-  </div>
-  <div id="pricing">
-
-  </div>
-
-  <footer>
-
-  </footer>
 </body>
 
 </html>
