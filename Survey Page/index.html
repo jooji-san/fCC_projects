@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link href="https://fonts.googleapis.com/css?family=Pacifico|Roboto" rel="stylesheet">
-  <link rel="stylesheet" type='text/css' href="main--processed.css">
+  <link rel="stylesheet" type='text/css' href="main.css">
   <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
   <title>Survey</title>
 </head>
@@ -15,19 +15,14 @@
   <p id="description" class='small'> This is a simple survey</p>
   <main>
     <form action="" id="survey-form">
-      <div id="name-div" class="form-txt">
+      <div id="txt-div">
         <label for="name" id='name-label'> Name: </label>
         <input type="text" id="name" placeholder="Enter your name" required>
-      </div>
-      <div id="email-div" class="form-txt">
         <label for="email" id='email-label'> Email: </label>
         <input type="email" id="email" placeholder="Enter your email" required>
-      </div>
-      <div id="number-div" class="form-txt">
         <label for="number" id='number-label'> Number: </label>
         <input type="number" id="number" min='1' max='100' placeholder="Enter your number">
       </div>
-
       <select id='dropdown'>
         <option value="" disabled selected hidden>Please choose your gender</option>
         <option value="dr1">Male</option>

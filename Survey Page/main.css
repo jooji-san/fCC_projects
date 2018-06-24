@@ -8,40 +8,40 @@
   --text-black: #2a2c2e;
   --text-gray: #6c757d;
   --green: #17a2b8;
- }
- 
- * {
+}
+
+* {
   box-sizing: inherit;
   font-family: inherit;
   font-size: inherit;
- }
- 
- html {
+}
+
+html {
   box-sizing: border-box;
   font-weight: 500;
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-size: (12px + 1vmin);
- }
- 
- body {
+}
+
+body {
   background-color: var(--g1);
-   margin: 0;
- }
- 
- h1 {
+  margin: 0;
+}
+
+h1 {
   text-align: center;
   color: var(--g2);
-  font-family: "Pacifico", cursive;
+  font-family: 'Pacifico', cursive;
   font-size: 1.75em;
- }
- 
- .small {
+}
+
+.small {
   font-size: 1.25em;
   color: var(--gray-white);
   text-align: center;
- }
- 
- main {
+}
+
+main {
   background-color: var(--g3);
   width: 100%;
   max-width: 600px;
@@ -52,49 +52,81 @@
   border-width: 2px;
   border-color: black;
   box-shadow: 7px 7px 2px var(--g4);
- 
+
   display: flex;
   flex-direction: column;
   align-items: center;
- }
- 
- form {
+}
+
+form {
   box-sizing: border-box;
   width: 100%;
   height: 100%;
   padding-top: 1em;
- 
+
   display: flex;
   flex-direction: column;
   align-items: center;
- }
- 
- .form-txt {
+}
+
+#txt-div {
+  margin-top: 1rem;
   width: 90%;
-  margin: 1em 0;
- 
-  display: flex;
-  justify-content: center;
- }
- 
- .form-txt label {
-  padding-right: 1em;
- 
+  display: grid;
+  column-gap: 1.5rem;
+  row-gap: 1.5rem;
+  grid-template-columns: auto 1fr;
+  /* grid-template: auto auto auto; */
+  grid-template-areas:
+    'label1 input1'
+    'label2 input2'
+    'label3 input3'
+}
+
+#name-label {
+  grid-area: label1;
+}
+
+#email-label {
+  grid-area: label2;
+}
+
+#number-label {
+  grid-area: label3;
+}
+
+#name {
+  grid-area: input1;
+}
+
+#email {
+  grid-area: input2;
+}
+
+#number {
+  grid-area: input3;
+}
+
+#txt-div label {
   display: flex;
   justify-content: flex-end;
   align-items: center;
  }
  
- .form-txt input {
-  flex-grow: 1;
+ #txt-div input,
+ select {
+  padding: 0.2em;
+ }
+
+ #txt-div input {
   text-align: center;
   border-radius: 5px;
   outline: none;
   border-color: black;
   box-shadow: 4px 7px black;
  }
- 
- select {
+
+select {
   width: 80%;
   margin: 2em 0;
   border-radius: 5px;
@@ -103,50 +135,45 @@
   box-shadow: 4px 7px rgb(4, 4, 92);
   text-align: center;
   text-align-last: center;
- }
+}
  
- .form-txt input,
- select {
-  padding: 0.2em;
- }
- 
- #rad-ch-container {
+#rad-ch-container {
   width: 100%;
- 
+
   display: flex;
   justify-content: space-around;
- }
- 
- .rad-divs,
- .ch-divs {
+}
+
+.rad-divs,
+.ch-divs {
   margin-top: 0.5em;
   width: 100%;
   display: flex;
   flex-direction: row-reverse;
   justify-content: center;
   align-items: center;
- }
- 
- .rad-divs input,
- .ch-divs input {
+}
+
+.rad-divs input,
+.ch-divs input {
   height: 1em;
   width: 1em;
   margin: 0;
- }
- 
- .rad-divs label,
- .ch-divs label {
+}
+
+.rad-divs label,
+.ch-divs label {
   padding-left: 0.75em;
- }
- 
- textarea {
+}
+
+textarea {
   margin-top: 1.5em;
   width: 70%;
   border-radius: 5px;
   border-color: black;
- }
- 
- [type="submit"] {
+}
+
+[type='submit'] {
   margin-top: 2em;
   margin-bottom: 2em;
   padding: 0.5em 1em;
@@ -156,18 +183,30 @@
   border-radius: 5px;
   border-color: transparent;
   box-shadow: 3px 4px 2px 0px var(--g4);
- }
- 
- @media (max-width: 420px) {
- .form-txt {
-   width: 100%;
- 
-   flex-direction: column;
-   align-items: center;
+}
+
+@media (max-width: 420px) {
+  #txt-div {
+    width: 80%;
+    row-gap: 0.4rem;
+    grid-template-areas: 
+      'label1 label1'
+      'input1 input1'
+      'label2 label2'
+      'input2 input2'
+      'label3 label3'
+      'input3 input3'
   }
-  .form-txt input {
-   margin-top: 0.35em;
-   width: 85%;
+
+  #txt-div label {
+    justify-content: center;
   }
- }
- 
+
+  #txt-div input {
+    margin-bottom: 1rem;
+  }
+
+  select {
+    margin-top: 3rem;
+  }
+}
