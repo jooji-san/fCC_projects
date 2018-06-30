@@ -1,0 +1,187 @@
+:root {
+  --g1: #240041;
+  --g2: #27e297;
+  --g3: #f62a66;
+  --g4: #cdfb00;
+  --gray-white: #e9ecef;
+  --blue: #007bff;
+  --text-black: #2a2c2e;
+  --text-gray: #6c757d;
+  --green: #17a2b8;
+}
+* {
+  box-sizing: inherit;
+  /* border: 1px solid black; */
+}
+html {
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  margin: 0;
+  display: grid;
+  grid-template-columns: 1fr 4.5fr;
+  grid-template-rows: 1fr auto auto;
+  grid-template-areas:
+    'nav welcome'
+    'nav projects'
+    'nav footer';
+}
+
+nav {
+  width: 18.1818181818%;
+  height: 100vh;
+  grid-area: nav;
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-right: 0.25rem solid black;
+  background-color: #d81b60;
+}
+#logo {
+  font-size: 5rem;
+  margin: 1rem 0;
+  color: #f0fa9c;
+}
+nav a {
+  margin: 0.5rem 0;
+  font-size: 3.3vw;
+  text-decoration: none;
+  color: rgb(247, 242, 242);
+  transition: 0.8s;
+}
+
+nav a:hover {
+  color: black;
+}
+
+nav a:nth-of-type(1) {
+  margin-top: 2rem;
+}
+
+#welcome-section {
+  grid-area: welcome;
+  height: 100vh;
+  text-align: center;
+  background: linear-gradient(to left bottom, #009688, #c2185b);
+}
+#welcome-section h1 {
+  font-family: 'Pacifico', cursive;
+  font-size: 7rem !important;
+  text-align: center;
+  color: rgb(255, 255, 255);
+}
+#welcome-section h2 {
+  color: rgb(212, 212, 212);
+}
+#profile-link {
+  text-align: center;
+}
+#git-logo {
+  font-size: 10rem;
+  vertical-align: middle;
+  color: #ffeb3b;
+}
+
+#projects {
+  grid-area: projects;
+  text-align: center;
+  width: 100%;
+  max-width: 700px;
+  margin: 0 auto;
+}
+#tiles-container {
+  display: flex;
+  justify-content: space-around;
+}
+.project-tile {
+  width: 27%;
+  border: 0.25rem solid black;
+  border-radius: 0.6rem;
+  padding: 0 0.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.p-ico {
+  font-size: 3.5rem;
+  margin: 2rem 0;
+  vertical-align: middle;
+}
+#p1-ico {
+  color: blue;
+}
+#p2-ico {
+  color: rgb(255, 0, 255);
+}
+#p3-ico {
+  color: red;
+}
+
+footer {
+  margin-top: 1rem;
+  grid-area: footer;
+  /* position: absolute;
+  left: 0; */
+  width: 100%;
+  text-align: center;
+  font-size: 1.25rem;
+}
+
+footer i {
+  color: rgb(218, 23, 23);
+}
+
+@media (max-width: 640px) {
+  body {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 80px 1fr auto auto;
+    grid-template-areas:
+      'nav'
+      'welcome'
+      'projects'
+      'footer';
+  }
+
+  nav {
+    height: auto;
+    width: 100%;
+    border-right: none;
+    flex-direction: row;
+    justify-content: flex-end;
+  }
+  #logo {
+    margin-right: auto;
+    margin-left: 1rem;
+    font-size: 3rem;
+  }
+  nav a {
+    margin-right: 1.5rem;
+    font-size: 1.3rem;
+  }
+  nav a:nth-of-type(1) {
+    margin-top: 0;
+  }
+
+  #welcome-section {
+    height: calc(100vh - 80px);
+  }
+  #welcome-section h1 {
+    font-size: 4rem !important;
+  }
+  #welcome-section h2 {
+    font-size: 1.25rem;
+  }
+
+  #tiles-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .project-tile {
+    width: 70%;
+    margin-bottom: 1rem;
+  }
+}
