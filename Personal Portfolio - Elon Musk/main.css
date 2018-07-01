@@ -22,7 +22,7 @@ body {
   margin: 0;
   display: grid;
   grid-template-columns: 1fr 4.5fr;
-  grid-template-rows: 1fr auto auto;
+  grid-template-rows: minmax(100vh, auto) auto auto;
   grid-template-areas:
     'nav welcome'
     'nav projects'
@@ -44,6 +44,7 @@ nav {
   font-size: 5rem;
   margin: 1rem 0;
   color: #f0fa9c;
+  transition: 1s;
 }
 nav a {
   margin: 0.5rem 0;
@@ -52,20 +53,21 @@ nav a {
   color: rgb(247, 242, 242);
   transition: 0.8s;
 }
-
 nav a:hover {
   color: black;
 }
-
 nav a:nth-of-type(1) {
   margin-top: 2rem;
 }
 
 #welcome-section {
   grid-area: welcome;
-  height: 100vh;
+  padding-bottom: 1.5rem;
   text-align: center;
-  background: linear-gradient(to left bottom, #009688, #c2185b);
+  display: flex;
+  flex-direction: column;
+  background:
+    linear-gradient(to left bottom, #009688, #c2185b);
 }
 #welcome-section h1 {
   font-family: 'Pacifico', cursive;
@@ -78,6 +80,11 @@ nav a:nth-of-type(1) {
 }
 #profile-link {
   text-align: center;
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
 }
 #git-logo {
   font-size: 10rem;
@@ -159,6 +166,7 @@ footer i {
     font-size: 3rem;
   }
   nav a {
+    margin: 0;
     margin-right: 1.5rem;
     font-size: 1.3rem;
   }
